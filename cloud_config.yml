@@ -1,0 +1,13 @@
+#cloud-config
+
+network:
+  version: 1
+  config:
+  - type: physical
+    name: eth0
+    subnets:
+    - type: static
+      address: ${fixed_ip}
+      gateway: 172.31.1.1
+      dns_nameservers:
+      - 8.8.8.8
